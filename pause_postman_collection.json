@@ -1,0 +1,302 @@
+{
+  "info": {
+    "name": "PAUSE API (Full)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create User",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/pause/users"
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"uid\": \"abc123\",\n  \"userName\": \"Michael\",\n  \"email\": \"michael@example.com\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Get All Users",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/pause/users"
+        }
+      }
+    },
+    {
+      "name": "Get User by ID",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/pause/users/1"
+        }
+      }
+    },
+    {
+      "name": "Update User",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/pause/users/1"
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"uid\": \"abc123\",\n  \"userName\": \"Michael Updated\",\n  \"email\": \"updated@example.com\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Delete User",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/pause/users/1"
+        }
+      }
+    },
+    {
+      "name": "Create Pet",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/pause/pets"
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"userId\": 1,\n  \"petName\": \"Nano\",\n  \"state\": \"happy\",\n  \"unlockedItems\": [\n    \"hat\",\n    \"glasses\"\n  ],\n  \"customization\": \"neon\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Get All Pets",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/pause/pets"
+        }
+      }
+    },
+    {
+      "name": "Get Pet by ID",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/pause/pets/1"
+        }
+      }
+    },
+    {
+      "name": "Update Pet",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/pause/pets/1"
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"userId\": 1,\n  \"petName\": \"Nano Updated\",\n  \"state\": \"tired\",\n  \"unlockedItems\": [\n    \"cape\"\n  ],\n  \"customization\": \"retro\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Delete Pet",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/pause/pets/1"
+        }
+      }
+    },
+    {
+      "name": "Create Pause",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/pause/pauses"
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"userId\": 1,\n  \"durationMinutes\": 5\n}"
+        }
+      }
+    },
+    {
+      "name": "Get All Pauses",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/pause/pauses"
+        }
+      }
+    },
+    {
+      "name": "Get Pause by ID",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/pause/pauses/1"
+        }
+      }
+    },
+    {
+      "name": "Delete Pause",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/pause/pauses/1"
+        }
+      }
+    },
+    {
+      "name": "Create Review",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/pause/reviews"
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"userId\": 1,\n  \"question\": \"\\u00bfQu\\u00e9 significa SOLID?\",\n  \"userAnswer\": \"Principios de dise\\u00f1o de software\",\n  \"correct\": true\n}"
+        }
+      }
+    },
+    {
+      "name": "Get All Reviews",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/pause/reviews"
+        }
+      }
+    },
+    {
+      "name": "Get Review by ID",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/pause/reviews/1"
+        }
+      }
+    },
+    {
+      "name": "Delete Review",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/pause/reviews/1"
+        }
+      }
+    }
+  ]
+}
